@@ -1,0 +1,874 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.main_container{
+    width: 100%;
+    height: 100%;
+}
+/* Phonepe navbar */
+.navbar-container{
+    width: 100%;
+    box-shadow: rgba(114, 13, 13, 0.24) 0px 3px 8px;
+}
+.navbar{
+    width: 80vw;
+    margin: 0 auto;
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.phonepe-logo-container{
+    width: 12vw;
+}
+.phonepe-logo-container img{
+    width: 100%;
+}
+.navbar-right-heading{
+    display: flex;
+    gap: 2.5em;
+    padding-right: 1em;
+}
+.navbar-right-heading a{
+    text-decoration: none;
+    color: black;
+    font-size: small;
+}
+.navbar-right-threelines{
+    display: none;
+}
+/* front main page */
+.front-mainpage{
+    /* width: 100vw; */
+    height: auto;
+    margin-top: 1em;
+    padding-bottom: 5em;
+    position: relative;
+}
+.main-page-img img{
+    width: 100%;
+    height: 89vh;
+    position: relative;
+}
+.frontpage-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 1em;
+    left: 30em;
+}
+.Payment-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8em;
+    /* position: relative; */
+}
+.frontpage-middleimg{
+    position: absolute;
+    top: 7em;
+}
+.frontpage-middleimg img{
+    height: 30em;
+    width: 43em;
+    padding-top: 3em;
+}
+.Payment-details h1{
+    color:rgb(95, 37, 159);
+    font-size: 2.5em;
+
+}
+#Payment-text{
+    text-decoration:line-through;
+    font-size: 0.8em;
+    color:rgb(186, 186, 179);
+}
+.Payment-details h2{
+    color: rgb(3, 3, 100);
+}
+.Payment-details p{
+    color: gray;
+}
+.Payment-details  button{
+    width: 50%;
+    height: 2.5em;
+    border-radius: 15px;
+    border: none;
+    background-color:rgb(95, 37, 159);
+    color: white;
+}
+
+ /* Investment cards */
+ .section-investments{
+    height: 90vh;
+    padding-top: 3em;
+ }
+ .invest-card-container{
+    width: 80vw;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ .invest-card{
+    width: 25vw;
+    height: 50vh;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 1em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ }
+  .grow-img img{
+     width: 100%;
+    height: auto;
+    /* margin-top: 3em; chatgpt
+    margin-left: 6em; */
+    
+ }
+ .card-text{
+    padding-left: 1em;
+ }
+ .grow-img{
+    width: 80px;
+    margin: 0 auto;
+ }
+
+.card-text h2{
+    color: rgb(3, 3, 100);
+    margin:0; /* cg*/
+ }
+.card-text p{
+    color: gray;
+    margin-top: 0.5em;
+}
+.card-arrow{
+    align-self: flex-end;
+    width: 2em;
+    height: 2em;
+    /* margin-top: 1.5em; */
+}
+.card-arrow img{
+   width: 100%;
+    height: auto;
+}
+ /* phonepe-details */
+ .phonepe-details{
+    width: 100%;
+    height: 100%;
+ }
+ .cirle{
+    width: 80vw;
+    height: 80vh;
+    margin: 0 auto;
+    background-color: rgb(42, 31, 88);
+    border-radius: 50px;
+    position: relative;
+ }
+ .service-heading{
+    text-align: center;
+    color: rgb(125, 166, 253);
+    padding-top: 1em;
+    /* font-size: x-large; */
+ }
+ .phonepe-service{
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-around;
+    text-align: center; 
+    padding-top: 4.5em;
+ }
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    font-size: small;
+}
+.service img{
+    width: 10em;
+}
+.qr-code{
+    position: absolute;
+    top: 24em;
+    width: 8em;
+    left: 44%;
+    bottom: -8em;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    gap: 2em;
+}
+.qr-code img{
+    width: 100%;
+    border-radius: 20px;
+}
+.fingertip{
+    width: 30em;
+}
+.fingertip-img{
+    width: 100%;
+}
+ /* phonepe-uses */
+.phonepe-uses{
+    width: 100%;
+    margin-top: 130vh;
+}
+.use-part1{
+    display: inline-flex;
+    /* justify-content: space-between; */
+    gap: 2em;
+}
+.uses{
+    width: 18em;
+    height: 8em;
+    border: 1px solid black;
+    border-radius: 7em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.use-icon-container{
+    background-color: rgb(201, 248, 201);
+    width: 5em;
+    height: 5em;
+    border: 2px;
+    border-radius: 100%;
+}
+.uses-img{
+    width: 100%;
+    border-radius: 100%;
+    border: 2px;
+}
+.spacing-cicle{
+    display: flex;
+    align-items: center;
+}
+.circle1{
+     background-color: rgb(53, 73, 81);
+    width: 4em;
+    height: 4em;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+}
+.circle2{
+    background-color: skyblue;
+    width: 4em;
+    height: 4em;
+    border-radius: 100%;
+}
+.circle3{
+    background-color: rgb(53, 73, 81);
+    width: 4em;
+    height: 4em;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+}
+ /* Travel, stays & commute */
+.travel-container{
+    width: 100%;
+    margin-top:6em;
+}
+.travel-detail{
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.travel-info{
+    text-align: center;
+    
+}
+.travel-info h1{
+    color:rgb(3, 3, 100) ;
+}
+.travel-info p{
+    color: gray;
+
+}
+#travel-service{
+    display: flex; 
+    justify-content: space-evenly;
+    padding-top: 3em;
+}
+.travel-sadhan{
+    width:18vw;
+    height: 40vh;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    background-color: rgb(243, 242, 241);
+}
+.travel-sadhan h2{
+    margin: 0.5em 0 0 1em;
+}
+.travel-sadhan img{
+    width: 10em;
+    align-self: flex-end;
+}
+.explore-btn{
+    text-align: center;
+    padding-top: 3em;
+}
+.explore-now{
+    width: 12em;
+    height: 3em;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    background-color: rgb(3, 3, 100);
+}
+
+/* PhonePe International */
+.PhonePe_International_container{
+    width: 100%;
+    margin-top: 10em;
+}
+.PhonePe_International_info{
+    width: 80vw;
+    height: 70vh;
+    margin: 0 auto;
+    background-color:  rgb(42, 42, 121);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 2em;
+    padding-top: 7em;
+    position: relative;
+}
+
+.country{
+    width: 80vw;
+}
+.country-img-container{
+    width: 8em;
+    height: 8em;
+    border-radius: 100%;
+    display: flex;
+    gap: 2em;
+}
+.country-img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: contain;  */
+}
+#earth{
+    position: absolute;
+    width: 12em;
+    top: -6em;
+}
+.trust-heading{
+    width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5em;
+    color: rgb(3, 3, 100);
+}
+.trust-heading p{
+    color: gray;
+    padding-top: 1em;
+}
+.person-img-container{
+    padding: 3em;
+    border-radius: 100px;
+    width: 35em;
+    height: 15em;
+    margin: 0 auto;
+}
+#person-img{
+    width: 100%;
+    border-radius: 50px;
+}
+/* Smart savings start here */
+.saving-in-phonepe{
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 10em;
+    text-align: center;
+    color: rgb(62, 52, 90);
+    
+}
+.saving-option{
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.options-here{
+    width: 60vw;
+    margin: 0 auto;
+    border: 1px solid gray;
+    height: 10em;
+    border-radius: 5em;
+    display: flex;
+    align-items: center;
+    gap: 3em; 
+}
+.option-left{
+    padding-top: 1em;
+    width: 25vw;
+    height: 10em;
+    border: 1px solid gray;
+    border-radius: 5em;
+    color: rgb(62, 52, 90);
+    font-weight: bold;
+}
+.arrow-saving-option{
+    display: none;
+}
+.option-right{
+    color: gray;
+
+}
+/* Comprehensive business solutions */
+.business-solution-container{
+    background-image: url(./assests/blur\ background.svg);
+    width: 100%;
+    margin-top: 5em;
+}
+.solution-card-container{
+    width: 75vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+.solution-heading{
+    align-self: flex-end;
+    color: rgb(62, 52, 90);
+    font-size: 1.5em;
+    padding-bottom: 3em;
+}
+.solution-card{
+    height: 70vh;
+    border: 1px solid black;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+.solution-left{
+    width:35vw;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    gap: 1em;
+    font-size: 1.2em;
+    margin: 4em 0 0 4em;
+    text-decoration: none;
+}
+.solution-right{
+    width: 50vw;
+    height: 80vh;
+}
+.solution-right-img{
+    width: 100%;
+    height: 100%;
+}
+.last-card-left{
+    width: 20vw;
+    color: white;
+    background-color: rgb(34, 21, 58);
+}
+ .last-card-Guardian{
+background-color: rgb(34, 21, 58);
+}
+/* .last-right-img{
+    width: 100%;
+} */
+.last-right-img{
+    width: 100%;
+    height: 70vh;
+    border-radius: 100px; 
+} 
+/* Footer */
+ .footer-container{
+    width: 100%;
+    margin-top: 8em;
+    margin-bottom: 3em;
+}
+.footer-content{
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    font-size:  x-small;
+    gap: 1em;
+}
+.footer-info a{
+    color: gray;
+    text-decoration: none;
+}
+.footer-phonepe-logo{
+    width: 8em;
+}
+.social-mdeia{
+    width: 15vw;
+    padding-top: 1em;
+    margin: 0 60em;
+}
+.footer-end{
+    text-align: center;
+    color: gray;
+}
+
+
+
+
+/* media query  */
+@media screen and (max-width:500px) { 
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+ }
+ .main_container{
+   width: 100%;
+ }
+    /* navbar */
+    .navbar-container{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+} 
+    .navbar{
+    width: 95vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .phonepe-logo-container{
+    width: 30vw;
+    display: block;
+   }
+.phonepe-logo-container img{
+    width: 100%;
+}
+    .navbar-right-heading a{
+       display: none;
+    }
+    .navbar-right-threelines{
+        width: 2em;
+        display: block;
+     } 
+    .navbar-right-threelines img{
+        width: 35px;
+        height: 25px;
+    }
+
+    /* front main page  */
+    .frontpage-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 3em;
+    left: 5em;
+}
+.frontpage-middleimg img{
+    
+    height: 30em;
+    width: 35em;
+    padding-top: 4em;
+}
+/* section-investments */
+    .invest-card-container{
+    width: 100vw;
+    height: 80vh;
+    margin-top: 5em;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3em;
+    justify-content: space-evenly;
+     align-items: center; 
+ }
+ .invest-card{
+    width: 90vw;
+    height: 20vh;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;  
+     gap: 1em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+ }
+  .grow-img img{
+    width: 4em;
+    height: auto;    
+    margin: 0;
+ }
+ .card-text h2{
+    color: rgb(3, 3, 100);
+ }
+.card-text p{
+    color: gray;
+}
+.card-arrow{
+    width: 2.5em;
+    height: 4em;
+    margin : 0;
+}
+.card-arrow img{
+   width: 2em;
+margin : 0;
+}
+.phonepe-details{
+    margin-top: 8em;
+}
+/* Simple, fast & secure transactions  */
+.tohide{
+    display: none;
+}
+.qr-code{
+    position: absolute;
+    left: 8.5em;
+
+}
+/* Travel, stays & commute */
+.travel-container{
+    width: 100vw;
+    height: auto;
+}
+#travel-service{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.travel-sadhan{
+    /* width:18vw;
+    height: 40vh;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    background-color: rgb(243, 242, 241); */
+
+    width: 90vw;
+    height: 25vh;
+    border: 1px solid black;
+    border-radius: 30px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(248, 241, 241);  
+    gap: 3em ;
+}
+/* PhonePe International */
+/* .PhonePe_International_container{
+    width: 100%;
+} */
+ .PhonePe_International_info{
+    width: 95VW;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+ }
+ .country{
+    width: 80vw;
+    height: 40vh;
+}
+.country-img-container{
+    padding-top: 3em;
+    width: 100%;
+    height: 100%;
+    display: flex;          
+  flex-wrap: wrap;         
+  gap: 1em;                
+  justify-content: center; 
+  width: 100%;             
+  overflow: hidden; 
+}
+.country-img{
+    width: 80px;             
+  height: 80px;
+  border-radius: 50%;     
+  object-fit: cover; 
+}
+/* Payments on PhonePe are safe */
+.trust-heading{
+    width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5em;
+    color: rgb(3, 3, 100);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+}
+.trust-heading p{
+    color: gray;
+    padding-top: 1em;
+}
+.person-img-container{
+    width: 80vw;
+}
+#person-img{
+    width: 100%; 
+    border-radius: 50px;
+}
+
+/* Smart savings start here */
+.saving-in-phonepe{
+    width: 100vw;
+    margin: 0 auto;
+    margin-top: 5em;
+    text-align: center;
+    color: rgb(62, 52, 90);
+    
+}
+.saving-option{
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.options-here{
+    width: 90vw;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid gray;
+    border-radius: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.option-left{
+    padding: 1.5em;
+    width: 90vw;
+    /* height: 10em; */
+    border: 1px solid gray;
+    border-radius: 5em;
+    color: rgb(62, 52, 90);
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.option-left-img{
+    width: 5em;
+}
+.option-left-respo{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.option-right{
+    color: gray;
+    padding-bottom: 1em;
+}
+.arrow-saving-option{
+    display: block;
+}
+
+/* Comprehensive business solutions  */
+.solution-card-container{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+.solution-card{
+    height: auto;
+    border: 1px solid gray;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: white;
+    /* justify-content: space-around; */
+}
+.solution-right{
+    width: 90vw;
+    height: 70vh;
+}
+.solution-right-img{
+    width: 100%;
+    height: 100%;
+}
+.solution-left{
+    width:100%;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 1em;
+    text-decoration: none;
+    padding-left: 2em;
+    padding-bottom: 1em;
+}
+.last-right-img{
+    width: 90vw;
+    height: 70vh;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius :0;
+    border-bottom-right-radius: 0px;
+} 
+
+
+ /* Footer  */
+.footer-info a,h4{
+    display: none;
+    
+}
+.footer-content{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3.5em;
+}
+.footer-respo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: large;
+    align-items: center;
+}
+.social-mdeia{
+    width: 15vw;
+    padding-top: 1em;
+    margin: 0 auto;
+    display: flex;
+    gap: 0.5em;
+
+}
+.footer-end{
+    text-align: center;
+    color: gray;
+}
+/* * {
+  outline: 1px solid red;
+} */
+
+}
