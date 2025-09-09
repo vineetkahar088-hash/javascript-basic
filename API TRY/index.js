@@ -55,4 +55,4 @@ async function CallApi(url) {
     }
 }
 
-CallApi("https://fakestoreapi.com/products");
+CallApi("https://free-food-menus-api-two.vercel.app/bbqs");

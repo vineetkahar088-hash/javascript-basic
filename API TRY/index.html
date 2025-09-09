@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,5 +21,169 @@
 
         </div>
     </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Filter Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: #222;
+      padding: 15px;
+    }
+    nav button {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    nav button:hover {
+      background: #444;
+    }
+    nav button#active {
+      background: #ff9800;
+      color: white;
+      font-weight: bold;
+    }
+    .main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .items {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .items:hover {
+      transform: scale(1.05);
+    }
+    .items img {
+      max-width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .items p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    .items b {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    // Create Navbar
+    const nav = document.createElement("nav");
+    const buttons = [
+      { id: "all", text: "All" },
+      { id: "rating", text: "Rating 4+" },
+      { id: "price", text: "Price > 100" },
+      { id: "cat", text: "Category: Jewelery" }
+    ];
+
+    buttons.forEach((btn, i) => {
+      const button = document.createElement("button");
+      button.innerText = btn.text;
+      button.id = i === 0 ? "active" : btn.id; // "All" default active
+      nav.appendChild(button);
+    });
+    document.body.appendChild(nav);
+
+    // Create main container
+    const mainDiv = document.createElement("div");
+    mainDiv.className = "main";
+    document.body.appendChild(mainDiv);
+
+    async function CallApi(url) {
+      try {
+        const res = await fetch(url);
+        const ans = await res.json();
+
+        const allBtn = nav.children[0];
+        const ratingBtn = nav.children[1];
+        const priceBtn = nav.children[2];
+        const catBtn = nav.children[3];
+
+        const createCard = (obj) => `
+          <div class="items">
+              <img src="${obj?.image}" alt="">
+              <p><b>Title:</b> ${obj?.title?.substring(0, 15)}...</p>
+              <p><b>Description:</b> ${obj?.description?.substring(0, 30)}...</p>
+              <p><b>Price:</b> $${obj?.price}</p>
+              <p><b>Rating:</b> ${obj?.rating?.rate}</p>
+              <p><b>Category:</b> ${obj?.category}</p>
+          </div>
+        `;
+
+        const render = (filterFn = () => true) => {
+          mainDiv.innerHTML = ans
+            .filter(filterFn)
+            .map(createCard)
+            .join("");
+        };
+
+        const setActive = (activeBtn) => {
+          [...nav.children].forEach(btn => btn.removeAttribute("id"));
+          activeBtn.setAttribute("id", "active");
+        };
+
+        // Default render
+        render();
+
+        // Event Listeners
+        allBtn.addEventListener("click", () => {
+          setActive(allBtn);
+          render();
+        });
+
+        ratingBtn.addEventListener("click", () => {
+          setActive(ratingBtn);
+          render(item => item.rating.rate >= 4);
+        });
+
+        priceBtn.addEventListener("click", () => {
+          setActive(priceBtn);
+          render(item => item.price > 100);
+        });
+
+        catBtn.addEventListener("click", () => {
+          setActive(catBtn);
+          render(item => item.category === "jewelery");
+        });
+
+      } catch (err) {
+        console.log("Api error in js file", err);
+      }
+    }
+
+    CallApi("https://fakestoreapi.com/products");
+  </script>
+
 </body>
 </html>
